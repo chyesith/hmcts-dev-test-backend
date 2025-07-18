@@ -1,10 +1,55 @@
-# HMCTS Dev Test Backend
-This will be the backend for the brand new HMCTS case management system. As a potential candidate we are leaving
-this in your hands. Please refer to the brief for the complete list of tasks! Complete as much as you can and be
-as creative as you want.
+# Task Management System
 
-You should be able to run `./gradlew build` to start with to ensure it builds successfully. Then from that you
-can run the service in IntelliJ (or your IDE of choice) or however you normally would.
+Task management system built with:
+- **Spring Boot (Java 21)**
+- **JPA / Hibernate**
+- **PostgreSQL**
+- **Docker**
+- **JUnit**
+- **Mockito**
+- **testContainers**
+- **API documentation - Open API / Swagger**
 
-There is an example endpoint provided to retrieve an example of a case. You are free to add/remove fields as you
-wish.
+
+## Features
+
+
+- CRUD operations for tasks (Create, Read, Update, Delete)
+- DTO-based request and response mapping for clean separation
+- Input validation with `jakarta.validation`
+- Global CORS configuration for frontend-backend communication
+- OpenAPI 3.0 documentation via `springdoc-openapi`
+- Unit and integration testing with JUnit + MockMvc + testcontainers
+
+## Prerequisites
+Before running the project make sure you have:
+- [Docker](https://docs.docker.com/get-docker/) ≥ 20.x
+- [Docker Compose](https://docs.docker.com/compose/install/) ≥ 2.x
+
+## Getting Started
+- **clone the repository**
+```bash
+git clone https://github.com/your-username/task-management-api.git
+ task-management-api
+```
+- **create an .env file**
+- create .env file with followings
+
+```
+  POSTGRES_USER=devuser
+  POSTGRES_PASSWORD=devpassword
+  POSTGRES_DB=postgres
+
+```
+- **Build and start containers**
+```
+docker compose up --build
+```
+## API documentation
+Once the app is running:
+
+**Swagger UI** : http://localhost:4000/swagger-ui.html
+
+**OpenAPI JSON** : http://localhost:4000/v3/api-docs
+
+
